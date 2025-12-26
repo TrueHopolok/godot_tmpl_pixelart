@@ -12,7 +12,15 @@ config_version=5
 
 config/name="pixelart_template"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cu3wdat0ouma0"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="viewport"
 
 [dotnet]
 
@@ -22,8 +30,12 @@ project/assembly_name="gamejam_bread_21"
 
 folder_colors={
 "res://assets/": "red",
-"res://audio/": "orange",
+"res://audio/": "purple",
 "res://objects/": "green",
 "res://scenes/": "teal",
 "res://scripts/": "blue"
 }
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

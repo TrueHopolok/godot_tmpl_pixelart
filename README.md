@@ -5,3 +5,4 @@ Used for gamejams, so files like assets and audio are also commited into git rep
 
 Project setup:
 - Godot 4.5.1
+- Resolution 640x360 (aspect ratio 16:9)
