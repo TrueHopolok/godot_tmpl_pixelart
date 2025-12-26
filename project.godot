@@ -20,7 +20,7 @@ window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [dotnet]
 
@@ -33,8 +33,14 @@ folder_colors={
 "res://audio/": "purple",
 "res://objects/": "green",
 "res://scenes/": "teal",
-"res://scripts/": "blue"
+"res://scripts/": "blue",
+"res://ui/": "blue"
 }
+
+[gui]
+
+theme/custom="uid://b8ecc687tvf12"
+theme/custom_font="uid://b72dpbyv1r7a0"
 
 [rendering]
 
