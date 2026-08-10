@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var bg: Node2D = $BG
+@onready var bg: ColorRect = $BG
 
 
 func _process(_delta: float) -> void:
