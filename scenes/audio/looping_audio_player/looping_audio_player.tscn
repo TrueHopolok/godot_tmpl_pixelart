@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://xg882g5vcmee"]
+
+[ext_resource type="Script" uid="uid://bu3rwjqk8akcy" path="res://scenes/audio/looping_audio_player/looping_audio_player.gd" id="1_1atuq"]
+
+[node name="LoopingAudioPlayer" type="AudioStreamPlayer" unique_id=339444218]
+process_mode = 3
+autoplay = true
+bus = &"Music"
+script = ExtResource("1_1atuq")
