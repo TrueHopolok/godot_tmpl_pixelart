@@ -5,7 +5,7 @@ Used for gamejams, so files like assets and audio are also commited into git rep
 
 Project setup:
 
-- Godot 4.6
+- Godot 4.7.1
 - Resolution 640x360 (aspect ratio 16:9)
 
 ## Project includes:
