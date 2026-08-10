@@ -1,7 +1,6 @@
 class_name BetterButton
 extends Button
 
-
 # use load("sfx") to set some sfx as default
 @export var _press_sfx: AudioStream
 

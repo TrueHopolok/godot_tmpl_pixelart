@@ -1,7 +1,6 @@
 class_name AudioSettings
 extends Control
 
-
 const AUDIO_SECTION: String = "AUDIO"
 
 ## Will reset all audio settings by deleteing file at AUDIO_CFG_PATH
@@ -9,4 +8,5 @@ const AUDIO_SECTION: String = "AUDIO"
 
 
 func _ready() -> void:
-	if reset: push_warning("[AudioSettings]: varaible reset is set to true, remove it asap")
+	if reset:
+		push_warning("[AudioSettings]: varaible reset is set to true, remove it asap")

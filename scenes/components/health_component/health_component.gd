@@ -1,21 +1,21 @@
 class_name HealthComponent
 extends Node
 
-
 signal healed(added_hp: int)
 signal damaged(taken_dmg: int)
 signal died
 
 @export var initial_health: int = 100
 
-@onready var health: int = initial_health
 var _is_dead: bool = false
+
+@onready var health: int = initial_health
 
 
 func heal(hp: int) -> void:
 	if is_dead() || hp == 0:
 		return
-	elif hp < 0:
+	if hp < 0:
 		damage(-hp)
 		return
 	health += hp
@@ -25,12 +25,14 @@ func heal(hp: int) -> void:
 func damage(dmg: int) -> void:
 	if is_dead() || dmg == 0:
 		return
-	elif dmg < 0:
+	if dmg < 0:
 		heal(-dmg)
 		return
 	health -= dmg
-	if is_dead(): died.emit()
-	else: damaged.emit(dmg)
+	if is_dead():
+		died.emit()
+	else:
+		damaged.emit(dmg)
 
 
 func is_dead() -> bool:

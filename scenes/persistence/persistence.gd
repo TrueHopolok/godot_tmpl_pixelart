@@ -1,8 +1,6 @@
 extends Node
 
-
 const SAVE_PATH: String = "user://bestscore.bin"
-
 
 var best_score: int = 0
 var current_score: int = 0
@@ -17,7 +15,8 @@ func _load() -> void:
 	var file: FileAccess = FileAccess.open(SAVE_PATH, FileAccess.READ)
 	if not file:
 		var err: Error = FileAccess.get_open_error()
-		if err != ERR_FILE_NOT_FOUND: printerr("[Persistence]: loading error:", FileAccess.get_open_error())
+		if err != ERR_FILE_NOT_FOUND:
+			printerr("[Persistence]: loading error:", FileAccess.get_open_error())
 		return
 	# NOTE: data = JSON.parse_string(file.get_as_text())
 	best_score = file.get_32()
@@ -38,7 +37,8 @@ func _save() -> void:
 
 ## Updates best score if was beaten and saves  into file if it was
 func submit() -> void:
-	if current_score <= best_score: return
+	if current_score <= best_score:
+		return
 	best_score = current_score
 	_save()
 
